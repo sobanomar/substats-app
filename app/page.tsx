@@ -13,8 +13,9 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Sub Stats - Jiu-Jitsu Evolved",
+  description:
+    "Sub Stats is a performance analytics platform designed for Brazilian Jiu-Jitsu (BJJ) competitors and coaches.",
 };
 
 export default function Home() {
