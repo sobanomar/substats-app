@@ -3,6 +3,7 @@ import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
+import ViewportAware from "@/components/Common/ViewportAware";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
@@ -14,23 +15,40 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Free Next.js Template for Startup and SaaS",
   description: "This is Home for Startup Nextjs Template",
-  // other metadata
 };
 
 export default function Home() {
   return (
     <>
       <ScrollUp />
+
+      {/* Hero - no viewport aware since it's above fold */}
       <Hero />
-      {/* <Features />
-      <Video />
-      <Brands /> */}
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+
+      {/* Viewport aware sections */}
+      <ViewportAware threshold={0.2}>
+        <AboutSectionOne />
+      </ViewportAware>
+
+      <ViewportAware threshold={0.2}>
+        <AboutSectionTwo />
+      </ViewportAware>
+
+      <ViewportAware threshold={0.2}>
+        <Testimonials />
+      </ViewportAware>
+
+      <ViewportAware threshold={0.2}>
+        <Pricing />
+      </ViewportAware>
+
+      <ViewportAware threshold={0.2}>
+        <Blog />
+      </ViewportAware>
+
+      <ViewportAware threshold={0.2}>
+        <Contact />
+      </ViewportAware>
     </>
   );
 }
