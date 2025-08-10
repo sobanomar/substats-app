@@ -25,7 +25,11 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []); // Empty dependency array ensures this runs only once
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -40,22 +44,22 @@ const Header = () => {
   const usePathName = usePathname();
 
   return (
-    <div>
+    <div className={`relative ${sticky ? "h-[76px]" : "h-0"}`}>
       <header
-        className={`header left-0 top-0 z-40 flex items-center transition-all duration-300 ease-in-out  ${
-          sticky
-            ? "fixed left-4 right-4 top-4 z-[9999] rounded-xl border bg-white !bg-opacity-20 shadow-sticky backdrop-blur-md transition  dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
-            : "absolute min-w-full rounded-xl bg-transparent"
-        }`}
+        className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent transition-all duration-300 ease-in-out
+          ${
+            sticky
+              ? "bg-white !bg-opacity-20 shadow-sticky backdrop-blur-xl dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
+              : "bg-transparent"
+          }
+        `}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full text-2xl font-bold ${
-                  oswald.className
-                }  ${sticky ? "py-4 lg:py-2" : "py-8"} `}
+                className={`header-logo block w-full text-2xl font-bold ${oswald.className} `}
               >
                 SUB STATS
               </Link>
@@ -147,18 +151,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link> */}
                 <div>
                   <ThemeToggler />
                 </div>
