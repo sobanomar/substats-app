@@ -31,7 +31,7 @@ export default function Home() {
         <AboutSectionOne />
       </ViewportAware>
 
-      <ViewportAware threshold={0.2}>
+      {/* <ViewportAware threshold={0.2}>
         <AboutSectionTwo />
       </ViewportAware>
 
@@ -49,7 +49,7 @@ export default function Home() {
 
       <ViewportAware threshold={0.2}>
         <Contact />
-      </ViewportAware>
+      </ViewportAware> */}
     </>
   );
 }

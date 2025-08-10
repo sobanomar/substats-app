@@ -49,7 +49,7 @@ const Header = () => {
         className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent transition-all duration-300 ease-in-out
           ${
             sticky
-              ? "bg-white !bg-opacity-20 shadow-sticky backdrop-blur-xl dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
+              ? "bg-white !bg-opacity-10 shadow-sticky backdrop-blur-xl dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
               : "bg-transparent"
           }
         `}
@@ -59,7 +59,9 @@ const Header = () => {
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full text-2xl font-bold ${oswald.className} `}
+                className={`header-logo block w-full text-2xl font-bold ${
+                  oswald.className
+                } ${"py-4 lg:py-2"}`}
               >
                 SUB STATS
               </Link>
