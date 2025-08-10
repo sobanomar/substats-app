@@ -1,283 +1,211 @@
+import { oswald } from "@/utils/fonts";
 import Link from "next/link";
+import heroImage from "@/public/jiu-jitsu/3.jpg";
 
 const Hero = () => {
   return (
     <>
       <section
         id="home"
-        className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 flex h-[100vh] items-center overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark"
       >
+        {/* Background image with opacity */}
+        <div
+          className="absolute inset-0 z-[-1]"
+          style={{
+            backgroundImage: `url(${heroImage.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.2, // Adjust opacity here (0.1 to 1)
+          }}
+        />
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
+            <div className="w-full items-center px-4">
               <div
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
+                <h1
+                  className={`animated-gradient animate-slide-up-1 mb-5 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-500 bg-clip-text text-4xl font-semibold uppercase leading-tight text-transparent dark:from-blue-200 dark:via-blue-500 dark:to-blue-500 sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight`}
+                >
+                  <div className={`${oswald.className}`}>master the mat</div>
                 </h1>
-                <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                <h1 className="animate-fade-in-up mb-5 text-xl uppercase leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-4xl md:leading-tight">
+                  <div className={`${oswald.className}`}>Jiu-Jitsu Evolved</div>
+                </h1>
+                <p className="animate-fade-in-up mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  TOURNAMENT ANALYSIS FOR COMPETITORS, BY COMPETITORS.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="animate-fade-in flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    href="/"
+                    className="rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 md:py-4"
                   >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
+                    Let&apos;s Roll
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="h-[400px] w-[80vw] overflow-hidden ">
+          <Image
+            src={heroImage}
+            alt="hero-image"
+            className="blob-shape h-full w-full object-cover"
+          />
+        </div> */}
+
+        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
-            width="450"
-            height="556"
-            viewBox="0 0 450 556"
+            width="400"
+            height="300"
+            viewBox="0 0 400 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="277"
-              cy="63"
-              r="225"
-              fill="url(#paint0_linear_25:217)"
+              cx="80"
+              cy="240"
+              r="70"
+              fill="url(#leftCircleGradient)"
+              opacity="0.15"
             />
             <circle
-              cx="17.9997"
-              cy="182"
-              r="18"
-              fill="url(#paint1_radial_25:217)"
+              cx="250"
+              cy="180"
+              r="100"
+              stroke="url(#leftCircleStroke)"
+              strokeWidth="3"
+              opacity="0.3"
             />
-            <circle
-              cx="76.9997"
-              cy="288"
-              r="34"
-              fill="url(#paint2_radial_25:217)"
-            />
-            <circle
-              cx="325.486"
-              cy="302.87"
-              r="180"
-              transform="rotate(-37.6852 325.486 302.87)"
-              fill="url(#paint3_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="184.521"
-              cy="315.521"
-              r="132.862"
-              transform="rotate(114.874 184.521 315.521)"
-              stroke="url(#paint4_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="356"
-              cy="290"
-              r="179.5"
-              transform="rotate(-30 356 290)"
-              stroke="url(#paint5_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="191.659"
-              cy="302.659"
-              r="133.362"
-              transform="rotate(133.319 191.659 302.659)"
-              fill="url(#paint6_linear_25:217)"
+            <path
+              d="M320 100 C 280 140, 220 160, 180 130"
+              stroke="url(#leftCurveGradient)"
+              strokeWidth="2"
+              opacity="0.25"
+              fill="none"
             />
             <defs>
-              <linearGradient
-                id="paint0_linear_25:217"
-                x1="-54.5003"
-                y1="-178"
-                x2="222"
-                y2="288"
+              <radialGradient
+                id="leftCircleGradient"
+                cx="0"
+                cy="0"
+                r="1"
                 gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(80 240) rotate(90) scale(70)"
               >
-                <stop stopColor="#4A6CF7" />
+                <stop stopColor="#4A6CF7" stopOpacity="0.3" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <radialGradient
-                id="paint1_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
-              >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
-              </radialGradient>
-              <radialGradient
-                id="paint2_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
-              >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
               </radialGradient>
               <linearGradient
-                id="paint3_linear_25:217"
-                x1="226.775"
-                y1="-66.1548"
-                x2="292.157"
-                y2="351.421"
+                id="leftCircleStroke"
+                x1="150"
+                y1="80"
+                x2="300"
+                y2="200"
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
               <linearGradient
-                id="paint4_linear_25:217"
-                x1="184.521"
-                y1="182.159"
-                x2="184.521"
-                y2="448.882"
+                id="leftCurveGradient"
+                x1="320"
+                y1="100"
+                x2="180"
+                y2="130"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_25:217"
-                x1="356"
-                y1="110"
-                x2="356"
-                y2="470"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint6_linear_25:217"
-                x1="118.524"
-                y1="29.2497"
-                x2="166.965"
-                y2="338.63"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
+                <stop stopColor="#4A6CF7" stopOpacity="0.5" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+
+        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
-            width="364"
-            height="201"
-            viewBox="0 0 364 201"
+            width="450"
+            height="550"
+            viewBox="0 0 450 550"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-              stroke="url(#paint0_linear_25:218)"
-            />
-            <path
-              d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-              stroke="url(#paint1_linear_25:218)"
-            />
-            <path
-              d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-              stroke="url(#paint2_linear_25:218)"
-            />
-            <path
-              d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-              stroke="url(#paint3_linear_25:218)"
+            <circle
+              cx="300"
+              cy="60"
+              r="220"
+              fill="url(#rightBigCircleGradient)"
+              opacity="0.3"
             />
             <circle
-              opacity="0.8"
-              cx="214.505"
-              cy="60.5054"
-              r="49.7205"
-              transform="rotate(-13.421 214.505 60.5054)"
-              stroke="url(#paint4_linear_25:218)"
+              cx="100"
+              cy="200"
+              r="30"
+              fill="url(#rightSmallCircleGradient)"
+              opacity="0.15"
             />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
+            <circle
+              cx="280"
+              cy="350"
+              r="150"
+              stroke="url(#rightCircleStroke)"
+              strokeWidth="4"
+              opacity="0.25"
+            />
+            <circle
+              cx="160"
+              cy="320"
+              r="120"
+              fill="url(#rightMediumCircleGradient)"
+              opacity="0.2"
+            />
             <defs>
-              <linearGradient
-                id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
+              <radialGradient
+                id="rightBigCircleGradient"
+                cx="0"
+                cy="0"
+                r="1"
                 gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(300 60) rotate(90) scale(220)"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_25:218"
-                x1="156.389"
-                y1="69.2405"
-                x2="156.389"
-                y2="212.24"
+                <stop stopColor="#4A6CF7" stopOpacity="0.35" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              </radialGradient>
+              <radialGradient
+                id="rightSmallCircleGradient"
+                cx="0"
+                cy="0"
+                r="1"
                 gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(100 200) rotate(90) scale(30)"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
+                <stop stopColor="#4A6CF7" stopOpacity="0.15" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              </radialGradient>
               <linearGradient
-                id="paint2_linear_25:218"
-                x1="125.389"
-                y1="69.2405"
-                x2="125.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_25:218"
-                x1="93.8507"
-                y1="67.2674"
-                x2="89.9278"
-                y2="210.214"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:218"
-                x1="214.505"
-                y1="10.2849"
-                x2="212.684"
-                y2="99.5816"
+                id="rightCircleStroke"
+                x1="130"
+                y1="200"
+                x2="300"
+                y2="500"
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
               <radialGradient
-                id="paint5_radial_25:218"
+                id="rightMediumCircleGradient"
                 cx="0"
                 cy="0"
                 r="1"
                 gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(220 63) rotate(90) scale(43)"
+                gradientTransform="translate(160 320) rotate(90) scale(120)"
               >
-                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                <stop offset="1" stopColor="white" stopOpacity="0.08" />
+                <stop stopColor="#4A6CF7" stopOpacity="0.25" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>

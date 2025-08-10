@@ -32,6 +32,9 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      fontFamily: {
+        anton: ["Oswald", "sans-serif"],
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
