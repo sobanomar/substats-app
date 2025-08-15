@@ -13,7 +13,7 @@ const NewsLetter = () => {
     >
       <div className="container">
         <h3
-          className={`${oswald.className} mb-6 text-2xl font-bold uppercase text-black dark:text-white md:text-4xl`}
+          className={`${oswald.className} mb-6 text-3xl font-bold uppercase text-black dark:text-white md:text-4xl`}
         >
           SIGN UP FOR SUB STATS
         </h3>
