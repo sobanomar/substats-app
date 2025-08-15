@@ -37,7 +37,7 @@ const MissionStatement = () => {
           </div>
           <div className="flex w-full justify-center px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative z-20 mb-12 aspect-[25/24] w-full md:max-w-[550px]"
+              className="wow fadeInUp relative z-20  aspect-[25/24] w-full md:max-w-[550px]"
               data-wow-delay=".15s"
             >
               <Image

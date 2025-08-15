@@ -13,6 +13,7 @@ import NewsLetter from "@/components/Contact/NewsLetter";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import PricingSection from "@/components/Pricing/PricingSection";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
@@ -51,6 +52,10 @@ export default function Home() {
 
       <ViewportAware delay={0.4}>
         <ContactSection />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
+        <PricingSection />
       </ViewportAware>
 
       <ViewportAware delay={0.4}>

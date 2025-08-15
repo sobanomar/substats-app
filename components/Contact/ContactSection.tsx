@@ -186,12 +186,12 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section id="contact" className="overflow-hidden py-16 md:py-20">
+      <div className="container ">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
+          <div className="w-full px-4 ">
             <div
-              className="wow fadeInUp mb-12 rounded-xl bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp rounded-xl   px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s"
             >
               <h2

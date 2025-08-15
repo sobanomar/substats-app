@@ -38,7 +38,7 @@ const About = () => {
               </h1>
 
               <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                className="wow fadeInUp  max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
                 <div className="animate-fade-in-up mx-[-12px]">
