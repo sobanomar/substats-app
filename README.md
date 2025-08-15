@@ -16,8 +16,8 @@ It provides in-depth, data-driven insights into match performance, helping athle
 
 ## 🎯 Key Features
 
-- **Match Analysis** – Detailed breakdown of techniques used, match flow, and win/loss conditions
 - **Performance Trends** – Identify patterns in your game to improve decision-making
+- **Match Analysis** – Detailed breakdown of techniques used, match flow, and win/loss conditions
 - **Custom Reports** – Personalized insights tailored to your style and goals
 - **Video Submission System** – Submit unlisted YouTube match links for private review
 - **Coach Support** – Data tools to help guide athletes toward competition success

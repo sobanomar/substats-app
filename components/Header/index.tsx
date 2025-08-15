@@ -46,10 +46,10 @@ const Header = () => {
   return (
     <div className={`relative ${sticky ? "h-[76px]" : "h-0"}`}>
       <header
-        className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent transition-all duration-300 ease-in-out
+        className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent transition-all duration-300 ease-in-out md:px-4
           ${
             sticky
-              ? "bg-white !bg-opacity-10 shadow-sticky backdrop-blur-xl dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
+              ? "bg-white !bg-opacity-10 shadow-sticky backdrop-blur-md dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"
               : "bg-transparent"
           }
         `}
@@ -72,7 +72,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg py-[6px] lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${

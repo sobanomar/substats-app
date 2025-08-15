@@ -1,5 +1,7 @@
+import About from "@/components/About/About";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import MeetOurCEO from "@/components/About/MeetOurCEO";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
@@ -27,27 +29,35 @@ export default function Home() {
       <Hero />
 
       {/* Viewport aware sections */}
-      <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.4}>
+        <About />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
+        <MeetOurCEO />
+      </ViewportAware>
+
+      {/* <ViewportAware delay={0.4}>
         <AboutSectionOne />
       </ViewportAware>
 
-      {/* <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.4}>
         <AboutSectionTwo />
       </ViewportAware>
 
-      <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.2}>
         <Testimonials />
       </ViewportAware>
 
-      <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.2}>
         <Pricing />
       </ViewportAware>
 
-      <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.2}>
         <Blog />
       </ViewportAware>
 
-      <ViewportAware threshold={0.2}>
+      <ViewportAware delay={0.2}>
         <Contact />
       </ViewportAware> */}
     </>
