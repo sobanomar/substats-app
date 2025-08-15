@@ -8,6 +8,7 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import ViewportAware from "@/components/Common/ViewportAware";
 import Contact from "@/components/Contact";
+import NewsLetter from "@/components/Contact/NewsLetter";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
@@ -45,6 +46,10 @@ export default function Home() {
 
       <ViewportAware delay={0.4}>
         <Services />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
+        <NewsLetter />
       </ViewportAware>
 
       <ViewportAware delay={0.4}>

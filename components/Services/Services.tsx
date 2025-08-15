@@ -81,7 +81,7 @@ const Services = () => {
                 the contact form. Instructions below:
               </p>
 
-              <ul className="ml-8 list-disc text-base font-medium leading-relaxed text-body-color marker:text-gray-600 marker:dark:text-gray-300 sm:text-lg sm:leading-relaxed">
+              <ul className="ml-8 list-disc text-base font-medium leading-relaxed text-body-color marker:text-gray-500 marker:dark:text-gray-300 sm:text-lg sm:leading-relaxed">
                 {processList.map((step, index) => (
                   <li key={index}>{step}</li>
                 ))}
