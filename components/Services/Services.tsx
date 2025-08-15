@@ -25,7 +25,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="md:py-160 relative overflow-hidden py-14 lg:py-20">
+    <section
+      id="services"
+      className="md:py-160 relative overflow-hidden py-14 lg:py-20"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 z-[-1]"

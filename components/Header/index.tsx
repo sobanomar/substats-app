@@ -102,7 +102,7 @@ const Header = () => {
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
-                          <Link
+                          <a
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
@@ -111,7 +111,7 @@ const Header = () => {
                             }`}
                           >
                             {menuItem.title}
-                          </Link>
+                          </a>
                         ) : (
                           <>
                             <p
