@@ -1,6 +1,6 @@
 import { oswald } from "@/utils/fonts";
 import Link from "next/link";
-import heroImage from "@/public/jiu-jitsu/3.jpg";
+import heroImage from "@/public/jiu-jitsu/3.webp";
 
 const Hero = () => {
   return (

@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
@@ -42,7 +43,11 @@ export default function Home() {
         <MissionStatement />
       </ViewportAware>
 
-      {/* <ViewportAware delay={0.4}>
+      <ViewportAware delay={0.4}>
+        <Services />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
         <AboutSectionOne />
       </ViewportAware>
 
@@ -64,7 +69,7 @@ export default function Home() {
 
       <ViewportAware delay={0.2}>
         <Contact />
-      </ViewportAware> */}
+      </ViewportAware>
     </>
   );
 }

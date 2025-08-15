@@ -3,7 +3,7 @@ import { oswald } from "@/utils/fonts";
 
 const MissionStatement = () => {
   return (
-    <section className="md:py-160 relative overflow-hidden py-14 lg:py-20">
+    <section className="md:py-160 relative overflow-hidden py-14 lg:py-20 ">
       <div className="container relative z-10 ">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
