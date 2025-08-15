@@ -38,12 +38,12 @@ const Hero = () => {
                   TOURNAMENT ANALYSIS FOR COMPETITORS, BY COMPETITORS.
                 </p>
                 <div className="animate-fade-in flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="/"
+                  <a
+                    href="#services"
                     className="rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 md:py-4"
                   >
                     Let&apos;s Roll
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

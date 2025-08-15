@@ -61,12 +61,12 @@ const Services = () => {
               targeted improvements to their game.
             </p>
             <div className="mt-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
-              <Link
-                href="/"
+              <a
+                href="#contact"
                 className="animate-fade-in rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-3"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </ServiceCard>
 

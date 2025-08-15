@@ -54,12 +54,12 @@ const About = () => {
                 with one of our data stranglers. Let&apos;s get rollin!
               </h1>
               <div className=" my-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Link
-                  href="/"
+                <a
+                  href="#contact"
                   className="animate-fade-in  rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-4"
                 >
                   Let&apos;s Talk
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -92,7 +92,7 @@ const About = () => {
                   {/* Photo 3 */}
                   <div className="animate-scale-in delay-3 relative aspect-square overflow-hidden rounded-xl lg:hidden xl:flex">
                     <Image
-                      src="/jiu-jitsu/3.jpg" // You can change this path
+                      src="/jiu-jitsu/3.webp" // You can change this path
                       alt="jiu-jitsu competition"
                       fill
                       className="object-cover drop-shadow-three dark:drop-shadow-none"
