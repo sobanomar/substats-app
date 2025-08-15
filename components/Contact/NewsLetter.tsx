@@ -8,10 +8,10 @@ const NewsLetter = () => {
 
   return (
     <div
-      className="wow fadeInUp relative z-10 bg-white py-12  shadow-three dark:bg-gray-dark sm:p-12 xl:p-14"
+      className="wow fadeInUp relative z-10 bg-white pt-12 shadow-three dark:bg-gray-dark "
       data-wow-delay=".2s"
     >
-      <div className="container">
+      <div className="container  border-b border-body-color border-opacity-20 py-8 dark:border-white dark:border-opacity-10">
         <h3
           className={`${oswald.className} mb-6 text-3xl font-bold uppercase text-black dark:text-white md:text-4xl`}
         >
