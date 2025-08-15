@@ -2,6 +2,7 @@ import About from "@/components/About/About";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import MeetOurCEO from "@/components/About/MeetOurCEO";
+import MissionStatement from "@/components/About/MissionStatement";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
@@ -35,6 +36,10 @@ export default function Home() {
 
       <ViewportAware delay={0.4}>
         <MeetOurCEO />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
+        <MissionStatement />
       </ViewportAware>
 
       {/* <ViewportAware delay={0.4}>

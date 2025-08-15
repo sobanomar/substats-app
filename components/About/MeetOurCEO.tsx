@@ -25,16 +25,16 @@ const MeetOurCEO = () => {
           </h3>
         </div>
         <div className="-mx-4 flex flex-wrap">
-          <div className="flex w-full justify-center px-4 lg:w-1/2">
+          <div className="animate-slide-right flex w-full justify-center px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative z-20 mb-12 aspect-[25/24] w-full md:max-w-[500px]"
+              className="wow fadeInUp animate-slide-right relative z-20 mb-12 aspect-[25/24] w-full md:max-w-[500px]"
               data-wow-delay=".15s"
             >
               <Image
                 src="/jiu-jitsu/ceo_substats.avif"
                 alt="CEO Image"
                 fill
-                className="rounded-xl object-cover drop-shadow-three dark:drop-shadow-none"
+                className="rounded-xl object-cover drop-shadow-three dark:drop-shadow-none "
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

@@ -21,7 +21,7 @@ const About = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className=" border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 xl:w-1/2">
               <SectionTitle
@@ -75,7 +75,7 @@ const About = () => {
                       fill
                       className="object-cover drop-shadow-three dark:drop-shadow-none"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-40"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-20"></div>
                   </div>
 
                   {/* Photo 2 */}
@@ -86,7 +86,7 @@ const About = () => {
                       fill
                       className="object-cover drop-shadow-three dark:drop-shadow-none"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-40"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-20"></div>
                   </div>
 
                   {/* Photo 3 */}
@@ -97,7 +97,7 @@ const About = () => {
                       fill
                       className="object-cover drop-shadow-three dark:drop-shadow-none"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-40"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-20"></div>
                   </div>
 
                   {/* Photo 4 */}
@@ -108,7 +108,7 @@ const About = () => {
                       fill
                       className="object-cover drop-shadow-three dark:drop-shadow-none"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-40"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-white opacity-10 dark:bg-black dark:opacity-20"></div>
                   </div>
                 </div>
 
