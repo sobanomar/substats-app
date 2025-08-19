@@ -49,7 +49,7 @@ const Hero = () => {
                 >
                   <div className={`${oswald.className}`}>master the mat</div>
                 </h1>
-                <h1 className="animate-fade-in-up h-[50px] overflow-hidden pb-2 text-2xl uppercase leading-tight text-black dark:text-white sm:h-[60px] sm:leading-tight md:h-[70px] md:text-4xl md:leading-tight">
+                <h1 className="animate-fade-in-up h-[50px] overflow-hidden text-2xl uppercase leading-tight text-black dark:text-white sm:h-[60px] sm:leading-tight md:h-[70px] md:text-4xl md:leading-tight">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={texts[index]}
