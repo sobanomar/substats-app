@@ -67,7 +67,7 @@ const Dropdown = ({
 
         {/* Custom dropdown trigger */}
         <div
-          className="w-full cursor-pointer rounded-lg border border-stroke bg-[#f8f8f8] px-6 py-3 pr-12 text-base text-body-color outline-none transition-all duration-300 ease-in-out hover:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary"
+          className="w-full cursor-pointer rounded-lg border border-stroke bg-[#f8f8f8] px-4 py-3 pr-12 text-base text-body-color outline-none transition-all duration-300 ease-in-out hover:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary"
           onClick={toggleDropdown}
         >
           <span
@@ -95,7 +95,7 @@ const Dropdown = ({
             {options.map((option) => (
               <div
                 key={option.value}
-                className="cursor-pointer px-6 py-2 text-base text-body-color transition-colors duration-200 hover:bg-gray-100 dark:text-body-color-dark dark:hover:bg-gray-700"
+                className="cursor-pointer px-4 py-2 text-base text-body-color transition-colors duration-200 hover:bg-gray-100 dark:text-body-color-dark dark:hover:bg-gray-700"
                 onClick={() => handleSelect(option.value, option.label)}
               >
                 {option.label}
@@ -133,7 +133,7 @@ const Input = ({
         name={name}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-lg border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+        className="w-full rounded-lg border border-stroke bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         {...props}
       />
     </div>
@@ -165,7 +165,7 @@ const Textarea = ({
         rows={rows}
         placeholder={placeholder}
         required={required}
-        className="w-full resize-none rounded-lg border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+        className="w-full resize-none rounded-lg border border-stroke bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         {...props}
       />
     </div>
