@@ -10,7 +10,7 @@ const Hero = () => {
   const texts = [
     "Jiu-Jitsu Evolved",
     "AI-Powered Insights",
-    "Expert Black-Belt Reviews",
+    "Competition Analysis",
     "AI Video Analysis",
   ];
 
@@ -64,8 +64,9 @@ const Hero = () => {
                   </AnimatePresence>
                 </h1>
                 <p className="animate-fade-in-up mb-12 max-w-[650px] text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Tournament insights for competitors, by competitors — enhanced
-                  with AI-powered breakdowns to accelerate your progress.
+                  Competition insights for competitors, by competitors —
+                  enhanced with AI-powered breakdowns to accelerate your
+                  progress.
                 </p>
                 <div className="animate-fade-in flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <a

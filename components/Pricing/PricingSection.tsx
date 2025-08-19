@@ -73,9 +73,24 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Basic"
+            packageName="Free"
+            price={"0"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="Basic match analysis"
+          >
+            <OfferList text="1 Match Analysis per Month" status="active" />
+            <OfferList text="Historical Dashboard" status="active" />
+            <OfferList text="Basic Performance Metrics" status="active" />
+            <OfferList text="Email Support" status="active" />
+            <OfferList text="AI Chatbot" status="inactive" />
+            <OfferList text="Advanced Analytics" status="inactive" />
+            <OfferList text="Priority Support" status="inactive" />
+          </PricingBox>
+
+          <PricingBox
+            packageName="Essentials"
             price={isMonthly ? "3.99" : "38.40"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Essential match analysis for recreational grapplers"
@@ -88,12 +103,12 @@ const PricingSection = () => {
             <OfferList text="Basic Performance Metrics" status="active" />
             <OfferList text="Email Support" status="active" />
             <OfferList text="AI Chatbot" status="inactive" />
-            <OfferList text="Advanced Analytics" status="inactive" />
+            {/* <OfferList text="Advanced Analytics" status="inactive" /> */}
             <OfferList text="Priority Support" status="inactive" />
           </PricingBox>
 
           <PricingBox
-            packageName="Pro"
+            packageName="Precision"
             price={isMonthly ? "7.99" : "76.70"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Enhanced analysis with AI insights for serious competitors"
@@ -107,7 +122,6 @@ const PricingSection = () => {
             <OfferList text="Advanced Performance Metrics" status="active" />
             <OfferList text="Detailed Technique Breakdown" status="active" />
             <OfferList text="Priority Email Support" status="active" />
-            <OfferList text="Competitor Comparison" status="active" />
           </PricingBox>
         </div>
 
@@ -135,6 +149,10 @@ const PricingSection = () => {
               duration={"report"}
               subtitle="One time PDF Analysis report emailed directly to grappler"
             >
+              <div className="pb-2 text-sm font-semibold">
+                <span className="text-base text-red-600">*</span> Minimum 4
+                Matches Required
+              </div>
               <OfferList
                 text="Detailed Match Analysis Report"
                 status="active"
@@ -143,7 +161,6 @@ const PricingSection = () => {
               <OfferList text="Email Delivery" status="active" />
               <OfferList text="Basic Performance Insights" status="active" />
               <OfferList text="Technique Breakdown" status="active" />
-              <OfferList text="Minimum 4 Matches Required" status="active" />
             </PricingBox>
             {/* </div> */}
           </div>

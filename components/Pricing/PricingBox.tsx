@@ -10,7 +10,7 @@ const PricingBox = (props: {
   return (
     <div className="w-full">
       <div
-        className="wow fadeInUp roundedxl rounded-xl bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark"
+        className="wow fadeInUp roundedxl h-full rounded-xl bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-between">

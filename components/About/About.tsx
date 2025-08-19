@@ -25,7 +25,7 @@ const About = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 xl:w-1/2">
               <SectionTitle
-                title="WHAT'S SUBSTAS?"
+                title="WHAT'S SUBSTATS?"
                 paragraph={[
                   "Hey there, Jiu-Jitsu competitor! Looking to optimize your performance and get a competitive edge? Then you've come to the right place. We're a team of BJJ fanatics, excited to help you make informed decisions using detailed data analysis.",
                   "The fast-paced world of Jiu-Jitsu is constantly evolving, so staying ahead of the curve is crucial. That's why we've cooked up a range of services to provide you with the data driven strategies you need to have that competitive edge. ",

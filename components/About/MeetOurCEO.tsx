@@ -19,9 +19,9 @@ const MeetOurCEO = () => {
       <div className="container relative z-10">
         <div className="mb-8 text-center lg:mb-16">
           <h3
-            className={`${oswald.className} mb-4 text-4xl font-bold text-black dark:text-white md:text-[50px]`}
+            className={`${oswald.className} mb-4 text-4xl font-bold uppercase text-black dark:text-white md:text-[50px]`}
           >
-            MEET OUR CEO
+            FOUNDER
           </h3>
         </div>
         <div className="-mx-4 flex flex-wrap">
