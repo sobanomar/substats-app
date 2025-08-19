@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import { oswald } from "@/utils/fonts";
+import logoDark from "@/public/jiu-jitsu/subs-stats_logo-no-bg_text.png";
+import logoLight from "@/public/jiu-jitsu/subs-stats_logo-text.jpg";
 
 const Header = () => {
   // Navbar toggle
@@ -56,14 +57,18 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full text-2xl font-bold ${
-                  oswald.className
-                } ${"py-4 lg:py-2"}`}
-              >
-                SUB STATS
+            <div className="py-4 xl:mr-12">
+              <Link href="/" className="">
+                <Image
+                  src={logoDark}
+                  alt="logo"
+                  className="hidden w-80 object-cover dark:block md:w-72"
+                />
+                <Image
+                  src={logoLight}
+                  alt="logo"
+                  className="w-80 rounded-md object-cover dark:hidden md:w-72"
+                />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -72,7 +77,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg py-[6px] lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
@@ -92,7 +97,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -104,7 +109,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <a
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0  ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -116,7 +121,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 "
                             >
                               {menuItem.title}
                               <span className="pl-3">
