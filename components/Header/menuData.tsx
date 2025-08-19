@@ -4,31 +4,31 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Home",
-    path: "#home",
+    path: "/#home",
     newTab: false,
   },
   {
     id: 2,
     title: "About",
-    path: "#about",
+    path: "/#about",
     newTab: false,
   },
   {
     id: 33,
     title: "Services",
-    path: "#services",
+    path: "/#services",
     newTab: false,
   },
   {
     id: 3,
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
     newTab: false,
   },
   {
     id: 3,
     title: "Plans & Pricing",
-    path: "#pricing",
+    path: "/#pricing",
     newTab: false,
   },
   // {

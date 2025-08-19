@@ -103,7 +103,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="#home"
+                      href="/#home"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Home
@@ -111,7 +111,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#services"
+                      href="/#services"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Services
@@ -119,7 +119,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#pricing"
+                      href="/#pricing"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Plans & Pricing
@@ -127,7 +127,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#about"
+                      href="/#about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       About
@@ -145,30 +145,30 @@ const Footer = () => {
                   Terms
                 </h2>
                 <ul>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       TOS
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
-                      href="/"
+                      href="/privacy-policy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Refund Policy
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -178,23 +178,33 @@ const Footer = () => {
                 <h2
                   className={`mb-10 text-xl font-bold text-black dark:text-white ${oswald.className}`}
                 >
-                  Support & Help
+                  Contact & Support
                 </h2>
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="/#contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Open Support Ticket
+                      Contact
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="mailto:abebjj@substats.app"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Terms of Use
+                      abebjj@substats.app
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/sub_stats/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      INSTAGRAM
                     </a>
                   </li>
                 </ul>
