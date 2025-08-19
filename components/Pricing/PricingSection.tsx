@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
-import { oswald } from "@/utils/fonts";
+import OfferList from "./OfferList";
+
+const SectionTitle = ({ children }) => (
+  <div className="mb-8 text-center lg:mb-16" style={{ width: "665px" }}>
+    {children}
+  </div>
+);
 
 const PricingSection = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -12,13 +16,18 @@ const PricingSection = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20">
       <div className="container">
         <div className="flex justify-center">
-          <div className="mb-8 text-center lg:mb-16" style={{ width: "665px" }}>
+          <SectionTitle>
             <h2
-              className={`${oswald.className} mb-8 text-4xl font-bold uppercase text-black dark:text-white md:text-[50px]`}
+              className="mb-8 text-4xl font-bold uppercase text-black dark:text-white md:text-[50px]"
+              style={{ fontFamily: "Oswald, sans-serif" }}
             >
               Choose your plan
             </h2>
-          </div>
+            <p className="text-base text-body-color">
+              Individual Grappler Portal - For hobbyists, local competitors, or
+              anyone wanting detailed match insights
+            </p>
+          </SectionTitle>
         </div>
 
         <div className="w-full">
@@ -59,71 +68,85 @@ const PricingSection = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              Yearly
+              Annual (Save 20%)
             </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center md:grid-cols-2 lg:grid-cols-2">
           <PricingBox
-            packageName="White Belt"
-            price={isMonthly ? "49" : "499"}
+            packageName="Basic"
+            price={isMonthly ? "3.99" : "38.40"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Perfect for individual competitors looking to analyze their game and improve performance."
+            subtitle="Essential match analysis for recreational grapplers"
           >
             <OfferList
-              text="Up to 3 Match Analysis per Month"
+              text="Up to 6 Match Analysis per Month"
               status="active"
             />
+            <OfferList text="Historical Dashboard" status="active" />
             <OfferList text="Basic Performance Metrics" status="active" />
-            <OfferList text="Technique Breakdown Reports" status="active" />
             <OfferList text="Email Support" status="active" />
-            <OfferList text="Advanced Guard Analysis" status="inactive" />
-            <OfferList text="Competitor Comparison" status="inactive" />
-            <OfferList text="Custom Training Plans" status="inactive" />
-            <OfferList text="Video Call Consultation" status="inactive" />
+            <OfferList text="AI Chatbot" status="inactive" />
+            <OfferList text="Advanced Analytics" status="inactive" />
+            <OfferList text="Priority Support" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Blue Belt"
-            price={isMonthly ? "149" : "1499"}
+            packageName="Pro"
+            price={isMonthly ? "7.99" : "76.70"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Ideal for serious competitors and small academies wanting detailed performance insights."
+            subtitle="Enhanced analysis with AI insights for serious competitors"
           >
             <OfferList
-              text="Up to 10 Match Analysis per Month"
+              text="Up to 12 Match Analysis per Month"
               status="active"
             />
+            <OfferList text="AI Chatbot" status="active" />
+            <OfferList text="Historical Dashboard" status="active" />
             <OfferList text="Advanced Performance Metrics" status="active" />
             <OfferList text="Detailed Technique Breakdown" status="active" />
             <OfferList text="Priority Email Support" status="active" />
-            <OfferList
-              text="Advanced Guard & Passing Analysis"
-              status="active"
-            />
-            <OfferList text="Competitor Comparison Reports" status="active" />
-            <OfferList text="Basic Training Recommendations" status="active" />
-            <OfferList text="Custom Training Plans" status="inactive" />
-            <OfferList text="Video Call Consultation" status="inactive" />
+            <OfferList text="Competitor Comparison" status="active" />
           </PricingBox>
-          <PricingBox
-            packageName="Black Belt"
-            price={isMonthly ? "299" : "2999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Complete solution for professional competitors, academies, and teams seeking elite-level analysis."
-          >
-            <OfferList text="Unlimited Match Analysis" status="active" />
-            <OfferList text="Elite Performance Analytics" status="active" />
-            <OfferList text="Complete Game Analysis" status="active" />
-            <OfferList text="24/7 Priority Support" status="active" />
-            <OfferList
-              text="Advanced Guard & Passing Analysis"
-              status="active"
-            />
-            <OfferList text="Detailed Competitor Scouting" status="active" />
-            <OfferList text="Custom Training Plans" status="active" />
-            <OfferList text="Monthly Video Consultation" status="active" />
-            <OfferList text="Team/Academy Dashboard" status="active" />
-          </PricingBox>
+        </div>
+
+        {/* One-time PDF Report Section */}
+        <div className="mt-16">
+          <div className="flex justify-center ">
+            <div
+              className="mb-8 text-center lg:mb-16"
+              style={{ width: "665px" }}
+            >
+              <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">
+                One-Time Analysis
+              </h3>
+              <p className="text-base text-body-color">
+                Perfect for occasional analysis needs
+              </p>
+            </div>
+          </div>
+
+          {/* <div className="flex justify-center"> */}
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center">
+            <PricingBox
+              packageName="PDF Report"
+              price={"14.99"}
+              duration={"report"}
+              subtitle="One time PDF Analysis report emailed directly to grappler"
+            >
+              <OfferList
+                text="Detailed Match Analysis Report"
+                status="active"
+              />
+              <OfferList text="PDF Format for Easy Sharing" status="active" />
+              <OfferList text="Email Delivery" status="active" />
+              <OfferList text="Basic Performance Insights" status="active" />
+              <OfferList text="Technique Breakdown" status="active" />
+              <OfferList text="Minimum 4 Matches Required" status="active" />
+            </PricingBox>
+            {/* </div> */}
+          </div>
         </div>
       </div>
 
