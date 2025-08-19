@@ -191,7 +191,7 @@ const ContactSection = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 ">
             <div
-              className="wow fadeInUp rounded-xl   px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp rounded-xl  bg-gray-100 px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s"
             >
               <h2

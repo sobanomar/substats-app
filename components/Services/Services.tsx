@@ -4,11 +4,11 @@ import bgImage from "@/public/jiu-jitsu/7.webp";
 
 const ServiceCard = ({ title, delay, children }) => (
   <div
-    className="wow fadeInUp rounded-xl bg-white !bg-opacity-70 p-8 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark md:p-12"
+    className="wow fadeInUp rounded-xl bg-white !bg-opacity-70 p-6 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark md:p-8"
     data-wow-delay={delay}
   >
     <h3
-      className={`${oswald.className} mb-4 text-3xl font-bold uppercase text-black dark:text-white sm:text-3xl`}
+      className={`${oswald.className} mb-2 text-2xl font-bold uppercase text-black dark:text-white`}
     >
       {title}
     </h3>
@@ -51,14 +51,15 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:gap-y-10">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 md:gap-y-10 lg:grid-cols-3">
           {/* Tournament Analysis Card */}
           <ServiceCard title="Tournament Analysis" delay=".1s">
             <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-              We provide in-depth analysis of tournament results, including
-              breakdowns of competitors, techniques, and strategies. This can
-              help competitors identify strengths and weaknesses, and make
-              targeted improvements to their game.
+              We offer in-depth analysis of tournament results, including
+              detailed breakdowns of competitors, their techniques, and unique
+              strategies. This can help competitors to effectively identify
+              their strengths, pinpoint weaknesses, and make targeted
+              improvements to their game.
             </p>
             <div className="mt-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
               <a
@@ -69,7 +70,41 @@ const Services = () => {
               </a>
             </div>
           </ServiceCard>
-
+          <ServiceCard title="AI Jiu Jitsu Coach" delay=".1s">
+            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              Train smarter with our AI-powered analysis tools. Get instant
+              feedback on your performance, tactical advice, and personalized
+              training paths to elevate your skills. The system is designed to
+              provide custom insights that help refine your technique and
+              strategy.
+            </p>
+            <div className="mt-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
+              <a
+                href="#contact"
+                className="animate-fade-in rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-3"
+              >
+                Learn More
+              </a>
+            </div>
+          </ServiceCard>
+          <ServiceCard title="Accessible Data Reports" delay=".1s">
+            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              Receive crisp, easy-to-digest analytical reports delivered
+              straight to your dashboard. This allows you to effortlessly track
+              your progress and spot important trends over time, giving you a
+              clear, data-driven overview of your journey and performance.
+            </p>
+            <div className="mt-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
+              <a
+                href="#contact"
+                className="animate-fade-in rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-3"
+              >
+                Learn More
+              </a>
+            </div>
+          </ServiceCard>
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 md:gap-y-10">
           {/* Process Card */}
           <ServiceCard title="The Process" delay=".2s">
             <div className="flex flex-col gap-4">
