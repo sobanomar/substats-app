@@ -9,7 +9,7 @@ export default function useLenis() {
       duration: 0.6, // 0.6–0.8 usually feels natural (not too laggy, not too snappy)
       easing: (t: number) => 1 - Math.pow(1 - t, 2), // easeOutQuad
       smoothWheel: true,
-      smoothTouch: false, // keep native feel on touch devices
+      syncTouch: false, // keep native feel on touch devices
       wheelMultiplier: 1, // don’t slow down laptop trackpads
       touchMultiplier: 1.2, // a little boost for touch
       infinite: false,
