@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <div className={`relative ${sticky ? "h-[76px]" : "h-0"}`}>
       <header
-        className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent transition-all duration-300 ease-in-out md:px-4
+        className={`header fixed left-1/2 top-4 z-40 flex w-[calc(100%-2rem)] max-w-[1200px] -translate-x-1/2 items-center rounded-xl bg-transparent pl-4 transition-all duration-300 ease-in-out
           ${
             sticky
               ? "bg-white !bg-opacity-10 shadow-sticky backdrop-blur-md dark:border-gray-dark dark:bg-gray-dark dark:shadow-sticky-dark"

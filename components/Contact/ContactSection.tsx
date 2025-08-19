@@ -207,20 +207,21 @@ const ContactSection = () => {
                   {/* First Name and Last Name */}
                   <div className="w-full px-4 md:w-1/2">
                     <Input
-                      id="firstName"
-                      name="firstName"
-                      label="First Name"
-                      placeholder="Enter your first name"
+                      id="fullName"
+                      name="fullName"
+                      label="Full Name"
+                      placeholder="Enter your full name"
+                      required
                     />
                   </div>
-                  <div className="w-full px-4 md:w-1/2">
+                  {/* <div className="w-full px-4 md:w-1/2">
                     <Input
                       id="lastName"
                       name="lastName"
                       label="Last Name"
                       placeholder="Enter your last name"
                     />
-                  </div>
+                  </div> */}
 
                   {/* Email and Phone */}
                   <div className="w-full px-4 md:w-1/2">
@@ -233,7 +234,7 @@ const ContactSection = () => {
                       required
                     />
                   </div>
-                  <div className="w-full px-4 md:w-1/2">
+                  {/* <div className="w-full px-4 md:w-1/2">
                     <Input
                       type="tel"
                       id="phone"
@@ -241,7 +242,7 @@ const ContactSection = () => {
                       label="Phone"
                       placeholder="Enter your phone number"
                     />
-                  </div>
+                  </div> */}
 
                   {/* Message */}
                   <div className="w-full px-4">
@@ -255,7 +256,7 @@ const ContactSection = () => {
                   </div>
 
                   {/* Are you? and Instagram Profile */}
-                  <div className="w-full px-4 md:w-1/2">
+                  {/* <div className="w-full px-4 md:w-1/2">
                     <Dropdown
                       id="category"
                       name="category"
@@ -270,10 +271,10 @@ const ContactSection = () => {
                       label="Instagram Profile"
                       placeholder="Add your handle"
                     />
-                  </div>
+                  </div> */}
 
                   {/* Services Requested and Competitor Profile */}
-                  <div className="w-full px-4 md:w-1/2">
+                  {/* <div className="w-full px-4 md:w-1/2">
                     <Dropdown
                       id="services"
                       name="services"
@@ -288,7 +289,7 @@ const ContactSection = () => {
                       label="Competitor Profile (Smoothcomp, AGF, FUJI, ETC)"
                       placeholder="Profile Links"
                     />
-                  </div>
+                  </div> */}
 
                   {/* Submit Button */}
                   <div className="w-full px-4">
