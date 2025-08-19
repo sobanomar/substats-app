@@ -145,7 +145,7 @@ const PricingSection = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center">
             <PricingBox
               packageName="PDF Report"
-              price={"14.99"}
+              price={"2.99"}
               duration={"report"}
               subtitle="One time PDF Analysis report emailed directly to grappler"
             >
