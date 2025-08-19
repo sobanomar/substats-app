@@ -1,8 +1,27 @@
+"use client";
+
 import { oswald } from "@/utils/fonts";
 import Link from "next/link";
 import heroImage from "@/public/jiu-jitsu/3.webp";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const texts = [
+    "Jiu-Jitsu Evolved",
+    "AI-Powered Insights",
+    "Expert Black-Belt Reviews",
+    "AI Video Analysis",
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % texts.length);
+    }, 3000); // change text every 3s
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <section
@@ -11,19 +30,18 @@ const Hero = () => {
       >
         {/* Background image with opacity */}
         <div
-          className="absolute inset-0 z-[-1]"
+          className="dark: absolute inset-0 z-[-1] opacity-15"
           style={{
             backgroundImage: `url(${heroImage.src})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: 0.2, // Adjust opacity here (0.1 to 1)
+            backgroundPosition: "center", // Adjust opacity here (0.1 to 1)
           }}
         />
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full items-center px-4">
               <div
-                className="wow fadeInUp mx-auto max-w-[800px] text-center"
+                className="wow fadeInUp mx-auto flex max-w-[800px] flex-col items-center text-center"
                 data-wow-delay=".2s"
               >
                 <h1
@@ -31,11 +49,23 @@ const Hero = () => {
                 >
                   <div className={`${oswald.className}`}>master the mat</div>
                 </h1>
-                <h1 className="animate-fade-in-up mb-5 text-xl uppercase leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-4xl md:leading-tight">
-                  <div className={`${oswald.className}`}>Jiu-Jitsu Evolved</div>
+                <h1 className="animate-fade-in-up h-[50px] overflow-hidden pb-2 text-2xl uppercase leading-tight text-black dark:text-white sm:h-[60px] sm:leading-tight md:h-[70px] md:text-4xl md:leading-tight">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={texts[index]}
+                      initial={{ y: "100%", opacity: 0 }}
+                      animate={{ y: "0%", opacity: 1 }}
+                      exit={{ y: "-100%", opacity: 0 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className={`${oswald.className}`}
+                    >
+                      {texts[index]}
+                    </motion.div>
+                  </AnimatePresence>
                 </h1>
-                <p className="animate-fade-in-up mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  TOURNAMENT ANALYSIS FOR COMPETITORS, BY COMPETITORS.
+                <p className="animate-fade-in-up mb-12 max-w-[650px] text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  Tournament insights for competitors, by competitors — enhanced
+                  with AI-powered breakdowns to accelerate your progress.
                 </p>
                 <div className="animate-fade-in flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <a
