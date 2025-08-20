@@ -26,7 +26,7 @@ It provides in-depth, data-driven insights into match performance, helping athle
 
 ## 📦 How It Works
 
-1. Record your matches at tournaments.
+1. Record your matches at competitions.
 2. Upload them to **YouTube** as “Unlisted.”
 3. Submit the links through our secure contact form.
 4. Receive a comprehensive performance analysis report.

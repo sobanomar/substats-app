@@ -43,7 +43,7 @@ const About = () => {
               >
                 <div className="animate-fade-in-up mx-[-12px]">
                   <div className="w-full px-3 ">
-                    <List text="In-depth tournament result analysis." />
+                    <List text="In-depth competition result analysis." />
                     <List text="Technique recommendations unique to you." />
                     <List text="Accessible data analytic reports at your fingertips" />
                   </div>

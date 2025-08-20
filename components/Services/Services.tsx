@@ -52,10 +52,10 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 md:gap-y-10 lg:grid-cols-3">
-          {/* Tournament Analysis Card */}
-          <ServiceCard title="Tournament Analysis" delay=".1s">
+          {/* Competition Analysis Card */}
+          <ServiceCard title="Competition Analysis" delay=".1s">
             <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-              We offer in-depth analysis of tournament results, including
+              We offer in-depth analysis of competition results, including
               detailed breakdowns of competitors, their techniques, and unique
               strategies. This can help competitors to effectively identify
               their strengths, pinpoint weaknesses, and make targeted

@@ -247,10 +247,10 @@ const ContactSection = () => {
                   {/* Message */}
                   <div className="w-full px-4">
                     <Textarea
-                      id="message"
-                      name="message"
-                      label="Please add a brief description about the videos that are to be analyzed (Paste YouTube links below)"
-                      placeholder="Enter your message and paste YouTube links here"
+                      id="query"
+                      name="query"
+                      label="Have a question or query? We'd love to hear from you"
+                      placeholder="Type your query here..."
                       rows={6}
                     />
                   </div>
