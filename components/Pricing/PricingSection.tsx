@@ -78,9 +78,9 @@ const PricingSection = () => {
             packageName="Free"
             price={"0"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Basic match analysis"
+            subtitle="Basic match analysis - 14 days free trial"
           >
-            <OfferList text="1 Match Analysis per Month" status="active" />
+            <OfferList text="1 Match Analysis on free trial" status="active" />
             <OfferList text="Historical Dashboard" status="active" />
             <OfferList text="Basic Performance Metrics" status="active" />
             <OfferList text="Email Support" status="active" />
