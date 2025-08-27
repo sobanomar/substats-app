@@ -108,6 +108,7 @@ const Header = () => {
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <a
+                            onClick={() => navbarToggleHandler()}
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0  ${
                               usePathName === menuItem.path
