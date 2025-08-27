@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     designation: "Black Belt, Hamel Jiu-Jitsu",
     content:
       "Just got some analytics 📊 from Sub Stats I thought I sucked at jiu-jitsu. Thanks to the report, now I know I suck 💪🏻",
-    image: "/images/testimonials/auth-01.png",
+    image: "/jiu-jitsu/testimonials/benny.png",
     star: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonialData: Testimonial[] = [
     designation: "Black Belt Head Coach/Gym Owner A&M Jiu-Jitsu",
     content:
       "Sub Stats has helped a ton with the direction I need to take with my students after a big event like the ADCC Open. I didn’t have to remember or sift through hours of footage to figure out what went right or wrong, Sub Stats did it all! With that report, I was able to analyze my student’s performance individually and as a team and with that information, I was able to create an effective plan of action that will lead to even better results in the future.",
-    image: "/images/testimonials/auth-02.png",
+    image: "/jiu-jitsu/testimonials/dru.jpg",
     star: 5,
   },
   {
@@ -27,7 +27,7 @@ const testimonialData: Testimonial[] = [
     designation: "Blue Belt, Arizona",
     content:
       "Working with Sub Stats has been a game changer for me. The data breakdown gave me a clear picture of where I’m strong and where I need to improve. It’s awesome to have my matches tracked and analyzed. It’s something I can look back on months or even years from now. Super professional work, and it really helps me take my training for competitions to the next level.",
-    image: "/images/testimonials/auth-03.png",
+    image: "/jiu-jitsu/testimonials/tommy.png",
     star: 5,
   },
 ];
@@ -40,8 +40,8 @@ const Testimonials = () => {
     >
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Athletes Are Saying?"
+          paragraph="Real athletes, real results — here’s what our community has to say about Sub Stats"
           center
         />
 
