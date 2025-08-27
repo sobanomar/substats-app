@@ -34,6 +34,10 @@ export default function Home() {
       {/* Hero - no viewport aware since it's above fold */}
       <Hero />
 
+      <ViewportAware delay={0.2}>
+        <Testimonials />
+      </ViewportAware>
+
       {/* Viewport aware sections */}
       <ViewportAware delay={0.4}>
         <StatsSection />
@@ -75,9 +79,7 @@ export default function Home() {
         <AboutSectionTwo />
       </ViewportAware>
 
-      <ViewportAware delay={0.2}>
-        <Testimonials />
-      </ViewportAware>
+      
 
       <ViewportAware delay={0.2}>
         <Pricing />

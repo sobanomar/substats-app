@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Benny",
+    designation: "Black Belt, Hamel Jiu-Jitsu",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Just got some analytics 📊 from Sub Stats I thought I sucked at jiu-jitsu. Thanks to the report, now I know I suck 💪🏻",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Dru",
+    designation: "Black Belt Head Coach/Gym Owner A&M Jiu-Jitsu",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Sub Stats has helped a ton with the direction I need to take with my students after a big event like the ADCC Open. I didn’t have to remember or sift through hours of footage to figure out what went right or wrong, Sub Stats did it all! With that report, I was able to analyze my student’s performance individually and as a team and with that information, I was able to create an effective plan of action that will lead to even better results in the future.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Tommy",
+    designation: "Blue Belt, Arizona",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Working with Sub Stats has been a game changer for me. The data breakdown gave me a clear picture of where I’m strong and where I need to improve. It’s awesome to have my matches tracked and analyzed. It’s something I can look back on months or even years from now. Super professional work, and it really helps me take my training for competitions to the next level.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -34,7 +34,10 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section
+      id="testimonials"
+      className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
