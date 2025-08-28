@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import OfferList from "./OfferList";
-import { PricingBox } from "./PricingBox";
+import PricingBox from "./PricingBox";
 
 const SectionTitle = ({ children }) => (
   <div className="mb-8 text-center lg:mb-16" style={{ width: "665px" }}>

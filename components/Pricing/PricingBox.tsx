@@ -1,4 +1,4 @@
-export const PricingBox = (props) => {
+const PricingBox = (props) => {
   const { price, duration, packageName, subtitle, children, onSelect } = props;
 
   return (
@@ -76,3 +76,5 @@ export const PricingBox = (props) => {
     </div>
   );
 };
+
+export default PricingBox;
