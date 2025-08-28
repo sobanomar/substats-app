@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import PricingBox from "./PricingBox";
 import OfferList from "./OfferList";
+import { PricingBox } from "./PricingBox";
 
 const SectionTitle = ({ children }) => (
   <div className="mb-8 text-center lg:mb-16" style={{ width: "665px" }}>
@@ -11,6 +11,20 @@ const SectionTitle = ({ children }) => (
 
 const PricingSection = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+
+  // Handler function to redirect to signup with query parameters
+  const handleSelect = (planConfig) => {
+    const params = new URLSearchParams();
+    params.append("type", planConfig.type);
+    params.append("plan", planConfig.plan);
+
+    if (planConfig.interval) {
+      params.append("interval", planConfig.interval);
+    }
+
+    const signupUrl = `https://athleteai-frontend.vercel.app/signup?${params.toString()}`;
+    window.location.href = signupUrl;
+  };
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20">
@@ -79,6 +93,13 @@ const PricingSection = () => {
             price={"0"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Basic match analysis - 14 days free trial"
+            onSelect={() =>
+              handleSelect({
+                type: "subscription",
+                plan: "free",
+                interval: isMonthly ? "month" : "year",
+              })
+            }
           >
             <OfferList text="1 Match Analysis on free trial" status="active" />
             <OfferList text="Historical Dashboard" status="active" />
@@ -94,6 +115,13 @@ const PricingSection = () => {
             price={isMonthly ? "3.99" : "38.40"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Essential match analysis for recreational grapplers"
+            onSelect={() =>
+              handleSelect({
+                type: "subscription",
+                plan: "essentials",
+                interval: isMonthly ? "month" : "year",
+              })
+            }
           >
             <OfferList
               text="Up to 6 Match Analysis per Month"
@@ -103,7 +131,6 @@ const PricingSection = () => {
             <OfferList text="Basic Performance Metrics" status="active" />
             <OfferList text="Email Support" status="active" />
             <OfferList text="AI Chatbot" status="inactive" />
-            {/* <OfferList text="Advanced Analytics" status="inactive" /> */}
             <OfferList text="Priority Support" status="inactive" />
           </PricingBox>
 
@@ -112,6 +139,13 @@ const PricingSection = () => {
             price={isMonthly ? "7.99" : "76.70"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Enhanced analysis with AI insights for serious competitors"
+            onSelect={() =>
+              handleSelect({
+                type: "subscription",
+                plan: "precision",
+                interval: isMonthly ? "month" : "year",
+              })
+            }
           >
             <OfferList
               text="Up to 12 Match Analysis per Month"
@@ -141,13 +175,18 @@ const PricingSection = () => {
             </div>
           </div>
 
-          {/* <div className="flex justify-center"> */}
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 justify-self-center">
             <PricingBox
               packageName="PDF Report"
               price={"2.99"}
               duration={"report"}
               subtitle="One time PDF Analysis report emailed directly to grappler"
+              onSelect={() =>
+                handleSelect({
+                  type: "one_time",
+                  plan: "pdf_report",
+                })
+              }
             >
               <div className="pb-2 text-sm font-semibold">
                 <span className="text-base text-red-600">*</span> Minimum 4
@@ -162,7 +201,6 @@ const PricingSection = () => {
               <OfferList text="Basic Performance Insights" status="active" />
               <OfferList text="Technique Breakdown" status="active" />
             </PricingBox>
-            {/* </div> */}
           </div>
         </div>
       </div>
