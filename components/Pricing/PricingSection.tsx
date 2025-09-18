@@ -22,7 +22,7 @@ const PricingSection = () => {
       params.append("interval", planConfig.interval);
     }
 
-    const signupUrl = `https://athleteai-frontend.vercel.app/signup?${params.toString()}`;
+    const signupUrl = `https://portal.substats.app/signup?${params.toString()}`;
     window.location.href = signupUrl;
   };
 
