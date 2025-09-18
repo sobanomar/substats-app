@@ -30,7 +30,7 @@ const Hero = () => {
       >
         {/* Background image with opacity */}
         <div
-          className="absolute inset-0 z-[-1] opacity-15"
+          className="absolute inset-0 z-[-1] opacity-20"
           style={{
             backgroundImage: `url(${heroImage.src})`,
             backgroundSize: "cover",
