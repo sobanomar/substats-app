@@ -2,39 +2,92 @@
 
 import { oswald } from "@/utils/fonts";
 import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const NewsLetter = () => {
   const { theme } = useTheme();
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setMessage("");
+    if (!email) return setMessage("Please enter your email address.");
+
+    setLoading(true);
+    try {
+      const res = await fetch(
+        "https://54.215.71.202.nip.io/api/users/subscribe/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        },
+      );
+
+      if (!res.ok) throw new Error("Subscription failed.");
+      const data = await res.json();
+
+      setMessage("✅ Subscription successful! Check your inbox.");
+      setEmail("");
+    } catch (err) {
+      setMessage("❌ Failed to subscribe. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div
-      className="wow fadeInUp relative z-10 bg-white pt-12 shadow-three dark:bg-gray-dark "
+      className="wow fadeInUp relative z-10 bg-white pt-12 shadow-three dark:bg-gray-dark"
       data-wow-delay=".2s"
     >
-      <div className="container  border-b border-body-color border-opacity-20 py-8 dark:border-white dark:border-opacity-10">
+      <div className="container border-b border-body-color border-opacity-20 py-8 dark:border-white dark:border-opacity-10">
         <h3
           className={`${oswald.className} mb-6 text-3xl font-bold uppercase text-black dark:text-white md:text-4xl`}
         >
           SIGN UP FOR SUB STATS
         </h3>
-        <p className="pb-6 text-base leading-relaxed text-body-color ">
+        <p className="pb-6 text-base leading-relaxed text-body-color">
           Stay up-to-date with the latest news
         </p>
-        <div className="grid grid-cols-1 gap-4 pb-4 md:grid-cols-3">
+
+        <form
+          onSubmit={handleSubscribe}
+          className="grid grid-cols-1 gap-4 pb-4 md:grid-cols-3"
+        >
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full rounded-xl border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none md:col-span-2 md:mb-0"
           />
-          <input
+          <button
             type="submit"
-            value="Subscribe"
-            className=" flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-9 py-3 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark md:col-span-1 md:mb-0"
-          />
-        </div>
-      </div>
+            disabled={loading}
+            className={`flex w-full items-center justify-center rounded-xl bg-primary px-9 py-3 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark md:col-span-1 md:mb-0 ${
+              loading ? "cursor-not-allowed opacity-70" : ""
+            }`}
+          >
+            {loading ? "Subscribing..." : "Subscribe"}
+          </button>
+        </form>
 
+        {message && (
+          <p
+            className={`mt-2 text-sm ${
+              message.startsWith("✅")
+                ? "text-green-600 dark:text-green-400"
+                : "text-red-600 dark:text-red-400"
+            }`}
+          >
+            {message}
+          </p>
+        )}
+      </div>
       <div>
         <span className="absolute left-2 top-7">
           <svg
