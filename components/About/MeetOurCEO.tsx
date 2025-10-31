@@ -31,7 +31,7 @@ const MeetOurCEO = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src="/jiu-jitsu/ceo_substats.avif"
+                src="/jiu-jitsu/ceo_substats.jpeg"
                 alt="CEO Image"
                 fill
                 className="rounded-xl object-cover drop-shadow-three dark:drop-shadow-none "

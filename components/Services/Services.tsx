@@ -2,6 +2,25 @@ import { oswald } from "@/utils/fonts";
 import Link from "next/link";
 import bgImage from "@/public/jiu-jitsu/7.webp";
 
+const VideoTutorialEmbed = ({ title, videoPath, delay, poster }) => (
+  <div
+    className="wow fadeInUp rounded-xl bg-white !bg-opacity-70 p-6 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark md:p-8"
+    data-wow-delay={delay}
+  >
+    <h3
+      className={`${oswald.className} mb-4 text-2xl font-bold uppercase text-black dark:text-white`}
+    >
+      {title}
+    </h3>
+    <div className="relative h-full w-full overflow-hidden rounded-lg">
+      <video className="h-full w-full" controls poster={poster}>
+        <source src={videoPath} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+);
+
 const ServiceCard = ({ title, delay, children }) => (
   <div
     className="wow fadeInUp rounded-xl bg-white !bg-opacity-70 p-6 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark md:p-8"
@@ -18,11 +37,18 @@ const ServiceCard = ({ title, delay, children }) => (
 
 const Services = () => {
   const processList = [
-    "Upload your competition match videos to your YouTube account.",
-    'Set the privacy of each video to "Unlisted."',
-    "Copy the video links from YouTube.",
-    "Paste the copied links into the designated field in the contact form.",
+    'Upload your match videos to Google Drive (set sharing to "Anyone with the link can view").',
+    "Alternatively, upload them to YouTube (set to Unlisted or Public).",
+    "Copy the video link from Google Drive or YouTube.",
+    'Log in to your portal and navigate to the "Video URL" page from the navigation panel.',
+    "Paste your video link, upload, and you’re done!",
   ];
+
+  const youtubeVideoPath = "/jiu-jitsu/video_tutorials/youtube_tutorial.mp4";
+  const driveVideoPath = "/jiu-jitsu/video_tutorials/google_drive_tutorial.mp4";
+
+  const youtubePoster = "/jiu-jitsu/video_tutorials/youtube_thumbnail.png";
+  const drivePoster = "/jiu-jitsu/video_tutorials/drive_thumbnail.png";
 
   return (
     <section
@@ -104,19 +130,51 @@ const Services = () => {
             </div>
           </ServiceCard>
         </div>
+
+        {/* --- */}
+
+        {/* New Tutorials Section */}
+        <div className="my-8 text-center lg:my-16">
+          <h2
+            className={`${oswald.className} mb-4 text-3xl font-bold uppercase text-black dark:text-white md:text-[40px]`}
+          >
+            Video Tutorials
+          </h2>
+          <p className="text-lg font-medium leading-relaxed text-body-color sm:text-xl sm:leading-relaxed">
+            Watch these short tutorials to see exactly how to **upload your
+            match videos**.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 md:gap-y-10">
+          <VideoTutorialEmbed
+            title="YouTube Upload Tutorial"
+            videoPath={youtubeVideoPath}
+            delay=".1s"
+            poster={youtubePoster}
+          />
+
+          <VideoTutorialEmbed
+            title="Google Drive Upload Tutorial"
+            videoPath={driveVideoPath}
+            delay=".2s"
+            poster={drivePoster}
+          />
+        </div>
+
+        {/* --- */}
+
+        {/* Process Card */}
         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 md:gap-y-10">
-          {/* Process Card */}
           <ServiceCard title="The Process" delay=".2s">
             <div className="flex flex-col gap-4">
               <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 <span className="font-semibold text-gray-500 dark:text-gray-300">
-                  1. Submit contact form -{" "}
+                  1. Upload your videos -{" "}
                 </span>
-                To start the process of utilizing our data analytics services,
-                the first step is to fill out and submit the contact form on our
-                website. Please upload your videos to YouTube, set the privacy
-                of each video to &quot;Unlisted,&quot; and paste the links in
-                the contact form. Instructions below:
+                Start by uploading your match videos to Google Drive (set
+                sharing to &quot;Anyone with the link can view&quot;) or YouTube
+                (set to Unlisted or Public). Then follow the steps below:
               </p>
 
               <ul className="ml-8 list-disc text-base font-medium leading-relaxed text-body-color marker:text-gray-500 marker:dark:text-gray-300 sm:text-lg sm:leading-relaxed">
@@ -129,10 +187,9 @@ const Services = () => {
                 <span className="font-semibold text-gray-500 dark:text-gray-300">
                   2. Receive tailored analytics -{" "}
                 </span>
-                Upon receiving your contact form, our team will begin analyzing
-                your provided data to deliver personalized analytics insights
-                directly to you. This analysis will provide detailed statistics
-                and insights based on your competition match videos.
+                Once your video links are uploaded, our team will process them
+                to generate detailed analytics and insights, delivering
+                personalized feedback directly to your portal.
               </p>
             </div>
           </ServiceCard>
