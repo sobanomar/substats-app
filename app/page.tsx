@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <ScrollUp />
+      {/* Removing scroll up for better user experience */}
+      {/* <ScrollUp /> */}
 
       {/* Hero - no viewport aware since it's above fold */}
       <Hero />
