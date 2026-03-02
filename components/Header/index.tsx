@@ -14,6 +14,9 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -43,6 +46,9 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+  const authUrl = "https://portal.substats.app/signup";
+  const authButtonClassName =
+    "inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-primary/90";
 
   return (
     <div className={`relative ${sticky ? "h-[76px]" : "h-0"}`}>
@@ -108,7 +114,7 @@ const Header = () => {
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <a
-                            onClick={() => navbarToggleHandler()}
+                            onClick={closeNavbar}
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0  ${
                               usePathName === menuItem.path
@@ -145,6 +151,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
+                                  onClick={closeNavbar}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
@@ -156,12 +163,27 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-4 border-t border-body-color/10 pt-4 lg:hidden">
+                    <a
+                      href={authUrl}
+                      onClick={closeNavbar}
+                      className={`${authButtonClassName} flex w-full`}
+                    >
+                      Login / Sign Up
+                    </a>
+                  </div>
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <div>
                   <ThemeToggler />
                 </div>
+                <a
+                  href={authUrl}
+                  className={`${authButtonClassName} ml-4 hidden lg:inline-flex`}
+                >
+                  Login / Sign Up
+                </a>
               </div>
             </div>
           </div>
