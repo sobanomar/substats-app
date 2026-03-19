@@ -113,7 +113,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block xl:flex xl:space-x-8">
+                  <ul className="block py-4 xl:flex xl:space-x-8">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
@@ -167,7 +167,7 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 flex items-center gap-3 border-t border-body-color/10 pt-4 xl:hidden">
+                  <div className="my-4 flex items-center gap-3 border-t border-body-color/10 pt-4 xl:hidden">
                     <a
                       href={cardsUrl}
                       target="_blank"
