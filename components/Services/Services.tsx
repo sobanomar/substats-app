@@ -1,5 +1,4 @@
 import { oswald } from "@/utils/fonts";
-import Link from "next/link";
 import bgImage from "@/public/jiu-jitsu/7.webp";
 
 const VideoTutorialEmbed = ({ title, videoPath, delay, poster }) => (
@@ -77,10 +76,10 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 md:gap-y-10 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 md:gap-y-10 lg:grid-cols-4">
           {/* Competition Analysis Card */}
           <ServiceCard title="Competition Analysis" delay=".1s">
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base  font-medium leading-relaxed text-body-color  sm:leading-relaxed">
               We offer in-depth analysis of competition results, including
               detailed breakdowns of competitors, their techniques, and unique
               strategies. This can help competitors to effectively identify
@@ -97,7 +96,7 @@ const Services = () => {
             </div>
           </ServiceCard>
           <ServiceCard title="AI Jiu Jitsu Coach" delay=".1s">
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base font-medium leading-relaxed text-body-color  sm:leading-relaxed">
               Train smarter with our AI-powered analysis tools. Get instant
               feedback on your performance, tactical advice, and personalized
               training paths to elevate your skills. The system is designed to
@@ -114,7 +113,7 @@ const Services = () => {
             </div>
           </ServiceCard>
           <ServiceCard title="Accessible Data Reports" delay=".1s">
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base font-medium leading-relaxed text-body-color  sm:leading-relaxed">
               Receive crisp, easy-to-digest analytical reports delivered
               straight to your dashboard. This allows you to effortlessly track
               your progress and spot important trends over time, giving you a
@@ -126,6 +125,25 @@ const Services = () => {
                 className="animate-fade-in rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-3"
               >
                 Learn More
+              </a>
+            </div>
+          </ServiceCard>
+          <ServiceCard title="Sub Stats Cards" delay=".1s">
+            <p className="text-base font-medium leading-relaxed text-body-color  sm:leading-relaxed">
+              Turn your performance into a shareable athlete card. Highlight
+              your identity, key stats, and competitive profile in a format
+              built for coaches, teammates, events, and social sharing. Present
+              your achievements in a polished, easy-to-read format that helps
+              you stand out.
+            </p>
+            <div className="mt-4 flex flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
+              <a
+                href="https://cards.substats.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="animate-fade-in rounded-lg bg-primary px-8 py-2 text-base font-semibold text-white hover:bg-primary/80 md:py-3"
+              >
+                Build My Card
               </a>
             </div>
           </ServiceCard>
