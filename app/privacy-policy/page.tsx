@@ -20,11 +20,11 @@ const page = (props: Props) => {
             Sub Stats LLC (&ldquo;Sub Stats,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) operates substats.app and
             cards.substats.app. Contact:{" "}
             <a
-              href="mailto:privacy@substats.app"
+              href="mailto:admin@substats.app"
               className="underline"
             >
-              privacy@substats.app
-            </a>
+              admin@substats.app
+</a>
           </p>
         </section>
 
@@ -77,10 +77,10 @@ const page = (props: Props) => {
             including data portability and the right to object to processing. To
             exercise any right, email{" "}
             <a
-              href="mailto:privacy@substats.app"
+              href="mailto:admin@substats.app"
               className="underline"
             >
-              privacy@substats.app
+              admin@substats.app
             </a>{" "}
             and we will respond within 30 days.
           </p>
