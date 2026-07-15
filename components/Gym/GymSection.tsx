@@ -53,13 +53,12 @@ export default function GymSection() {
           <h2
             className={`${oswald.className} text-4xl font-bold uppercase leading-tight text-black dark:text-white md:text-[50px]`}
           >
-            Give your whole gym a shared analysis workflow
+            Built for gyms that train, review, and improve together
           </h2>
           <p className="mt-5 text-base leading-8 text-body-color md:text-lg">
-            The same gym portal used inside AthleteAI is now part of the Sub
-            Stats marketing experience too. Gym owners can launch a shared
-            workspace, invite members, upload athlete footage, and manage team
-            analysis credits in one place.
+            Gym analysis is now available across the Sub Stats ecosystem. Gym
+            owners can launch a shared workspace, invite members, upload athlete
+            footage, and manage team analysis credits in one place.
           </p>
         </div>
 
@@ -90,10 +89,8 @@ export default function GymSection() {
               What gym owners get
             </h3>
             <p className="mt-3 text-base leading-8 text-body-color">
-              The portal code shows a real gym workspace with member invites,
-              shared upload flows, all-gym reporting, and subscription tracking.
-              This section now reflects that product instead of treating Sub
-              Stats as only an individual tool.
+              A gym workspace with member invites, shared upload flows, all-gym
+              reporting, and subscription tracking.
             </p>
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <a
