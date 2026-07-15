@@ -11,6 +11,9 @@ import {
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
+const PUBLIC_GYM_PLANS_URL =
+  "https://portal.substats.app/api/gyms/public/gym-plans/";
+
 const SectionTitle = ({ children }) => (
   <div className="mx-auto mb-8 max-w-[665px] text-center lg:mb-16">
     {children}
@@ -130,7 +133,7 @@ const PricingSection = () => {
       setGymPlansError("");
 
       try {
-        const response = await fetch("/api/gym-plans");
+        const response = await fetch(PUBLIC_GYM_PLANS_URL);
         if (!response.ok) {
           throw new Error("Failed to load gym plans.");
         }
