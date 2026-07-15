@@ -112,7 +112,7 @@ const Services = () => {
               </a>
             </div>
           </ServiceCard>
-          <ServiceCard title="Accessible Data Reports" delay=".1s">
+          <ServiceCard title="Accessible Reports" delay=".1s">
             <p className="text-base font-medium leading-relaxed text-body-color  sm:leading-relaxed">
               Receive crisp, easy-to-digest analytical reports delivered
               straight to your dashboard. This allows you to effortlessly track

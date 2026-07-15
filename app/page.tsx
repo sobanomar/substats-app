@@ -12,6 +12,7 @@ import Contact from "@/components/Contact";
 import ContactSection from "@/components/Contact/ContactSection";
 import NewsLetter from "@/components/Contact/NewsLetter";
 import Features from "@/components/Features";
+import GymSection from "@/components/Gym/GymSection";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import PricingSection from "@/components/Pricing/PricingSection";
@@ -54,6 +55,10 @@ export default function Home() {
 
       <ViewportAware delay={0.4}>
         <Services />
+      </ViewportAware>
+
+      <ViewportAware delay={0.4}>
+        <GymSection />
       </ViewportAware>
 
       <ViewportAware delay={0.4}>
