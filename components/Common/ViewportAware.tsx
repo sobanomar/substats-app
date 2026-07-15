@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 interface ViewportAwareProps {
@@ -14,16 +14,12 @@ const ViewportAware = ({
   className = "",
   delay = 0.7,
 }: ViewportAwareProps) => {
-  const [inView, setInView] = useState(false);
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
-      transition={{ delay, ease: "easeOut" }}
-      onViewportEnter={() => setInView(true)}
-      onViewportLeave={() => setInView(false)}
-      viewport={{ amount: 0.1 }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.12 }}
+      transition={{ delay, duration: 0.6, ease: "easeOut" }}
       className={className}
     >
       {children}
