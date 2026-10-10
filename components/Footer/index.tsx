@@ -145,14 +145,14 @@ const Footer = () => {
                   Terms
                 </h2>
                 <ul>
-                  {/* <li>
+                  <li>
                     <a
-                      href="/"
+                      href="/terms-and-conditions"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      TOS
+                      Terms and Conditions
                     </a>
-                  </li> */}
+                  </li>
                   <li>
                     <a
                       href="/privacy-policy"
